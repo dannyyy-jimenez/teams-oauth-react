@@ -1,0 +1,87 @@
+{
+  "name": "teams-oauth-react",
+  "version": "1.0.0",
+  "description": "Ready-to-use Microsoft Teams OAuth plugin for Next.js with Graph API integration",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.mjs",
+      "require": "./dist/components/index.js"
+    },
+    "./hooks": {
+      "types": "./dist/hooks/index.d.ts",
+      "import": "./dist/hooks/index.mjs",
+      "require": "./dist/hooks/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "microsoft",
+    "teams",
+    "oauth",
+    "graph-api",
+    "nextjs",
+    "react",
+    "authentication",
+    "msal"
+  ],
+  "author": "Danny Jimenez",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dannyyy-jimenez/teams-oauth-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dannyyy-jimenez/teams-oauth-react/issues"
+  },
+  "homepage": "https://github.com/dannyyy-jimenez/teams-oauth-react#readme",
+  "peerDependencies": {
+    "next": ">=13.0.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": false
+    },
+    "react": {
+      "optional": false
+    },
+    "react-dom": {
+      "optional": false
+    }
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^3.0.0",
+    "@azure/msal-react": "^2.0.0",
+    "@microsoft/microsoft-graph-client": "^3.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0"
+  }
+}
